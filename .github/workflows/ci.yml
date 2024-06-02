@@ -47,8 +47,8 @@ jobs:
   
       - name: Copy files to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@your_ec2_public_ip "mkdir -p ~/hello_world"
-          scp hello.py ubuntu@your_ec2_public_ip:~/hello_world/
+          ssh -o StrictHostKeyChecking=no ubuntu@18.216.190.94 "mkdir -p ~/hello_world"
+          scp hello.py ubuntu@18.216.190.94:~/hello_world/
   
       - name: Run Hello World script
-        run: ssh -o StrictHostKeyChecking=no ubuntu@your_ec2_public_ip "python3 ~/hello_world/hello.py"
+        run: ssh -o StrictHostKeyChecking=no ubuntu@18.216.190.94 "python3 ~/hello_world/hello.py"
